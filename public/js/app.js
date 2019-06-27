@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
                     + data.forecast.temperature + ' with a '
                     + data.forecast.rainChance + '% chance of rain.';
                 paragraphThree.textContent = 'The high for today is ' + data.forecast.tempHigh +
-                    ' with a low of ' + data.forecast.tempLow;
+                    ' with a low of ' + data.forecast.tempLow + '.';
             }
         })
     })
