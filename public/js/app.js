@@ -11,12 +11,14 @@ weatherForm.addEventListener('submit', (e) => {
 
     paragraphOne.textContent = 'Loading...';
     paragraphTwo.textContent = '';
+    paragraphThree.textContent = '';
 
     fetch('/weather?address=' + location).then((response) => {
         response.json().then(data => {
             if (data.error) {
                 paragraphOne.textContent = data.error;
                 paragraphTwo.textContent = '';
+                paragraphThree.textContent = '';
             } else {
                 paragraphOne.textContent = data.location;
                 paragraphTwo.textContent = data.forecast.summary + 'It is currently '
